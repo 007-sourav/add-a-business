@@ -8,14 +8,24 @@ var ist = document.querySelector("h5");
 var addbusinesss =document.querySelector("#add");
 // #add for selecting button's id
 
+var check=0;
+
+
 addbusinesss.addEventListener("click",function(){
-    ist.innerHTML="Business Partner";
-    ist.style.color="green";
+    
+    if(check ==0){
+        ist.innerHTML="Business Partner";
+        ist.style.color="green";
+
+        check=1;
+        return;
+    }else{
+        ist.innerHTML="not-business";
+        ist.style.color="red";
+        check=0;
+        return;
+    }
+    
 })
 
-var removebusiness = document.querySelector("#remove");
 
-removebusiness.addEventListener("click",function(){
-         ist.innerHTML="not-business";
-         ist.style.color="red";
-})
