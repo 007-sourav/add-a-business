@@ -16,12 +16,14 @@ addbusinesss.addEventListener("click",function(){
     if(check ==0){
         ist.innerHTML="Business Partner";
         ist.style.color="green";
+        console.log("hi hi business");
 
         check=1;
         return;
     }else{
         ist.innerHTML="not-business";
         ist.style.color="red";
+        console.log("not business");
         check=0;
         return;
     }
